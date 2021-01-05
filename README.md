@@ -41,14 +41,14 @@
 4. File Upload to Bucket
 
 ## Screenshots
-![Example screenshot](BS_Core_WepApp/ScreenShot/ScreenShot/Account-SignUp.jpg)
+![Example screenshot](./BS_Core_WepApp/ScreenShot/ScreenShot/Account-SignUp.jpg)
 ![Example screenshot](./BS_Core_WepApp/ScreenShot/Account-SignIn.jpg)
-![Example screenshot](../ScreenShot/Account-ForgotPassword.jpg)
-![Example screenshot](../ScreenShot/Storage-index.png)
-![Example screenshot](../ScreenShot/Storage-Create.png)
-![Example screenshot](../ScreenShot/Storage-Delete.png)
-![Example screenshot](../ScreenShot/Storage-Details.png)
-![Example screenshot](../ScreenShot/Storage-Edit.jpg)
+![Example screenshot](./BS_Core_WepApp/ScreenShot/Account-ForgotPassword.jpg)
+![Example screenshot](./BS_Core_WepApp/ScreenShot/Storage-index.png)
+![Example screenshot](./BS_Core_WepApp/ScreenShot/Storage-Create.png)
+![Example screenshot](./BS_Core_WepApp/ScreenShot/Storage-Delete.png)
+![Example screenshot](./BS_Core_WepApp/ScreenShot/Storage-Details.png)
+![Example screenshot](./BS_Core_WepApp/ScreenShot/Storage-Edit.jpg)
 
 ## Technologies
 * .NET Framework 4.6.1+
