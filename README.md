@@ -42,7 +42,7 @@
 
 ## Screenshots
 ![Example screenshot](BS_Core_WepApp/ScreenShot/ScreenShot/Account-SignUp.jpg)
-![Example screenshot](../ScreenShot/Account-SignIn.jpg)
+![Example screenshot](./BS_Core_WepApp/ScreenShot/ScreenShot/Account-SignIn.jpg)
 ![Example screenshot](../ScreenShot/Account-ForgotPassword.jpg)
 ![Example screenshot](../ScreenShot/Storage-index.png)
 ![Example screenshot](../ScreenShot/Storage-Create.png)
