@@ -1,0 +1,84 @@
+﻿@model IEnumerable<BS_Core_WepApp.Models.UserModel>
+
+@{
+    ViewData["Title"] = "User List";
+    Layout = "_Layout_admin";
+}
+<div class="row">
+    <div class="intro-message">
+        <h1>BitSpecial Firebase Database</h1>
+        <h3>Firestore/FthTest-users >> Table List</h3>
+        <hr class="intro-divider">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9 my-3">
+        <a asp-controller="Storage" asp-action="Create" class="btn btn-success">Create New User</a>      
+    </div>
+</div>
+<div class="row">
+    @if (Model.Count() != 0)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.logoPath)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.date)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Surname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Gender)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            <img src="@item.logoPath" class="rounded-circle" height="40" width="40" asp-append-version="true" />
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Surname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gender)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <strong style="text-align:center;">
+            No Records Found.
+        </strong>
+    }
+</div>

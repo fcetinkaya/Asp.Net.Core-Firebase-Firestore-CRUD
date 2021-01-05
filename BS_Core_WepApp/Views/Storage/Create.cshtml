@@ -1,0 +1,78 @@
+﻿@model BS_Core_WepApp.Models.UserModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="intro-message">
+            <h1>BitSpecial Firebase Database</h1>
+            <h3>Firestore/FthTest-users >> New User</h3>
+            <hr class="intro-divider">
+        </div>
+    </div>
+
+    <div class="col-md-10 mx-auto py-4">
+        <div class="card">
+            <div class="card-header bg-primary text-uppercase text-white">
+                <h4>Add New User</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form enctype="multipart/form-data" asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="date" class="control-label"></label>
+                                <input asp-for="date" class="form-control" />
+                                <span asp-validation-for="date" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Surname" class="control-label"></label>
+                                <input asp-for="Surname" class="form-control" />
+                                <span asp-validation-for="Surname" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Gender" class="control-label"></label>
+                                <select asp-for="Gender" class="form-control">
+                                    <option value="">Choose Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                                <span asp-validation-for="Gender" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="logoPath" class="control-label"></label>
+                                <div class="custom-file">
+                                    <input id="customFile" asp-for="logoPath" class="custom-file-input" type="file" name="file" accept="image/*" />
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                </div>
+                                <span asp-validation-for="logoPath" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Create" class="btn btn-primary rounded-0" />
+                                <a class="btn btn-info" asp-action="Index"><i class="fa fa-fast-forward"></i> Back to List</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+}

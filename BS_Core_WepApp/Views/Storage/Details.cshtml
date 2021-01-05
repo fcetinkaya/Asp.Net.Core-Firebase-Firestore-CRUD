@@ -1,0 +1,74 @@
+﻿@model BS_Core_WepApp.Models.UserModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="container">
+    <div class="row">
+        <div class="intro-message">
+            <h1>BitSpecial Firebase Database</h1>
+            <h3>Firestore/FthTest-users >> User Details</h3>
+            <hr class="intro-divider">
+        </div>
+    </div>
+
+    <div class="col-md-10 mx-auto py-4">
+        <div class="card">
+            <div class="card-header bg-info text-uppercase text-white">
+                <h4>User Details</h4>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Id)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Id)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.logoPath)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @if (@Html.DisplayNameFor(model => model.logoPath) == null)
+                        {
+                            <img src="/img/bit-special-icoon.png" class="rounded-circle" height="125" width="125" asp-append-version="true" />
+                        }
+                        else
+                        {
+                            <img src="@Model.logoPath" class="rounded-circle" height="125" width="125" asp-append-version="true" />
+                        }
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.date)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.date)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Surname)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Surname)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Gender)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Gender)
+                    </dd>
+                </dl>
+
+                <div class="form-group">
+                    <a class="btn btn-info" asp-action="Index"><i class="fa fa-fast-forward"></i> Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
