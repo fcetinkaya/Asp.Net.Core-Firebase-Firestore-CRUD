@@ -41,7 +41,7 @@
 4. File Upload to Bucket
 
 ## Screenshots
-![Example screenshot](../ScreenShot/Account-SignUp.jpg)
+![Example screenshot](./ScreenShot/Account-SignUp.jpg)
 ![Example screenshot](../ScreenShot/Account-SignIn.jpg)
 ![Example screenshot](../ScreenShot/Account-ForgotPassword.jpg)
 ![Example screenshot](../ScreenShot/Storage-index.png)
